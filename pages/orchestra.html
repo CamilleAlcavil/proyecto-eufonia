@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Orquesta - Corporación Cultural Eufonía</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&family=Montserrat:wght@300;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="shortcut icon" href="../img/faviconlira.png" />
@@ -47,12 +49,21 @@
     <!--Inicio contenido-->
     <main>
       <!--Imágenes Carousel-->
-      <section class="carousel2">
-        <img src="../img/orchestra.jpg" alt="Orquesta en concierto">
+      <section class="orchestraPortada">
+        <h1 class="h1orchestra tracking-in-expand">ORQUESTA</h1>
+        <div class="fade-in4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="../img/orchestra1-768.jpg">
+            <source media="(min-width: 1024px)" srcset="../img/orchestra1-1024.jpg">
+            <img src="../img/orchestra1-320.jpg" alt="Orquesta en concierto">
+          </picture>
+        </div>
       </section>
-      <h1 class="h1orchestra">ORQUESTA</h1>
+
       <section class="orquesta1">
-        <img src="../img/camerata.png" alt="Camerata de cuerdas">
+        <div data-aos="fade-right">
+          <img src="../img/camerata.png" alt="Camerata de cuerdas">
+        </div>
         <div class="resena">
           <h2>Historia</h2>
           <p>
@@ -72,11 +83,13 @@
             Humanismo Cristiano (UAHC) la orquesta pasa a formar parte de esta casa de
             estudios.</p>
         </div>
-        <img src="../img/firma-convenio.png" alt="Representantes UAHC y Eufonía">
+        <div data-aos="fade-left">
+          <img src="../img/firma-convenio.png" alt="Representantes UAHC y Eufonía">
+        </div>
       </section>
 
       <!--Tabla de conciertos-->
-      <h2 id="concert">Próximos Conciertos</h2>
+      <h2 id="concert">PRÓXIMOS CONCIERTOS</h2>
       <table class="tablaConciertos">
         <caption>
           Programación 2022
@@ -117,10 +130,11 @@
     </main>
 
     <!--Formulario de Contacto-->
-    <section class="contactoContainer">
-      <img src="../img/sumate2.jpg" alt="">
-        <a href="join.html">Postula a nuestra orquesta<br>
-          SÚMATE</a>
+    <section class="contactoContainer2">
+      <div class="invitacion1">
+        <p>Postula a nuestra orquesta</p>
+        <a buttonContacto2 href="join.html">SÚMATE</a>
+      </div>
     </section>
 
     <!--Footer-->
@@ -148,6 +162,12 @@
       </div>
     </footer>
   </section>
+
+  <!--Scripts-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

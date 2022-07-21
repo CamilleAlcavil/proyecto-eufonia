@@ -12,12 +12,9 @@ body {
   width: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
 /*MOBILE FIRST*/
 
 /*Declaración áreas index.html*/
@@ -33,7 +30,7 @@ main {
   grid-area: cartelera;
 }
 
-.sumate {
+.contacto1 {
   grid-area: sumate;
 }
 
@@ -72,12 +69,12 @@ nav ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding-top: 0.3rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar li {
   padding-top: 0.5rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid #0d0d0d;
   color: #0d0d0d;
 }
@@ -98,28 +95,89 @@ img {
 
 .presentacion {
   margin: 0 auto;
-  margin-bottom: 2rem;
+  /*margin-bottom: 0.5rem;*/
   text-align: center;
 }
 
 .titleContainer {
-  position: relative;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  max-width: 100%;
+  height: 70vh;
+  background-image: url(../img/carousel1-320.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.frase {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.titleWrap {
+  margin: 0 auto;
+  display: flex;
+}
+
+.titleBoxContainer {
+  display: flex;
+  flex-direction: column;
   color: #f2f2f2;
-  text-shadow: #262626;
+  align-self: center;
 }
 
-.presentacion h1 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.titleBox h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.titleOptions {
+  height: 2rem;
+  color: #f2f2f2;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: auto;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.titleOptions ul {
+  padding-left: 10px;
+  animation: cambiar 7s infinite;
+}
+
+.titleBox ul,
+.titleBox p {
+  margin: 0;
+}
+
+@keyframes cambiar {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 0;
+  }
+
+  25% {
+    margin-top: -2rem;
+  }
+  50% {
+    margin-top: -2rem;
+  }
+
+  55% {
+    margin-top: -4rem;
+  }
+  80% {
+    margin-top: -4rem;
+  }
+
+  85% {
+    margin-top: -2rem;
+  }
+  95% {
+    margin-top: -2rem;
+  }
+
+  100% {
+    margin-top: 0;
+  }
 }
 
 .pIntro1,
@@ -131,18 +189,27 @@ img {
 .pIntro2 {
   margin-bottom: 1rem;
 }
+
 .button1 {
-  padding: 5px 10px 5px 10px;
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   text-align: center;
-  background-color: #F21D2F;
+  background-color: #ffffff;
+  color: #0d0007;
+  border: 2px solid #0d0007;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.bIntro a:hover {
+  background-color: #0d0007;
   color: #ffffff;
-  border-radius: 0.313rem;
 }
 
 .educacionGrid {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #262626;
+  background-color: #0d0007;
   color: #f2f2f2;
   margin-bottom: 3rem;
 }
@@ -150,6 +217,9 @@ img {
 .educacionGrid h2 {
   text-align: center;
   padding: 2rem 1rem 2rem 1rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 .educacionGrid p {
@@ -192,15 +262,19 @@ img {
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 13rem;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: #F21D2F;
-  color: #ffffff;
-  border-radius: 0.313rem;
+  background-color: #f2f2f2;
+  color: #0d0007;
+  border: 2px solid #0d0007;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.btn2 a:hover {
+  background-color: #0d0007;
+  color: #f2f2f2;
 }
 
 .cartelera {
@@ -212,8 +286,10 @@ img {
 }
 
 .cartelera h2 {
-  padding: 2rem 1rem 2rem 1rem;
   text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 table {
@@ -227,6 +303,7 @@ caption {
   font-style: italic;
   font-size: 1.25rem;
   padding-bottom: 1.875rem;
+  padding-top: 1rem;
 }
 
 thead th:nth-child(1) {
@@ -258,44 +335,66 @@ tbody tr:nth-child(odd) {
 
 .button3 {
   display: block;
-  padding: 5px 10px 5px 10px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 8rem;
   text-align: center;
-  font-weight: 600;
-  background-color: #F21D2F;
-  color: #ffffff;
-  border-radius: 0.313rem;
-  margin-top: 15px;
+  background-color: #ffffff;
+  color: #0d0007;
+  border: 2px solid #0d0007;
+  font-family: "Frank Ruhl Libre", serif;
 }
 
-.sumate {
-  position: relative;
-  display: inline-block;
+.btn3 a:hover {
+  background-color: #0d0007;
+  color: #ffffff;
+}
+
+.contactoContainer1 {
+  display: flex;
+  max-width: 100%;
+  height: 35vh;
+  background-image: url(../img/sumate1-320.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contactoWrap {
+  margin: 0 auto;
+  display: flex;
+}
+
+.contactoLink {
+  display: flex;
+  align-items: center;
+}
+
+.buttonContacto1 {
+  color: #f2f2f2;
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 8rem;
   text-align: center;
+  background-color: #0d0d0d79;
+  border: 2px solid #f2f2f2;
 }
 
-.sumate a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.313rem 0.626rem 0.313rem 0.626rem;
-  font-weight: 600;
-  font-size: 1rem;
-  background-color: #73727288;
+.contactoLink a {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.5rem;
+  color: #f2f2f2;
+}
+
+.contactoLink a:hover {
+  background-color: #0d0007;
   color: #ffffff;
-  border: 3px solid #ffffff;
-}
-
-.logoMini {
-  grid-area: logoMini;
-}
-
-.siguenos {
-  grid-area: siguenos;
-}
-
-.rrssIcon {
-  grid-area: rrssIcon;
 }
 
 .footerGrid {
@@ -373,10 +472,30 @@ tbody tr:nth-child(odd) {
 
 .h1About {
   background-color: #0d0007;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
   color: #f2f2f2;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .textoAbout {
@@ -396,30 +515,57 @@ tbody tr:nth-child(odd) {
   row-gap: 1rem;
   margin: 0rem 2rem 2rem 2rem;
   text-align: justify;
-  font-size: 0.75;
+  font-size: 1rem;
 }
 
 .mision,
 .vision {
-  border: 3px solid #F21D2F;
   padding: 0rem 1rem 1rem 1rem;
-  border-radius: 0.5rem;
+  border: 0.3rem solid #0d0007;
+  border-radius: 0.3rem;
+}
+
+.swing-in-top-fwd {
+  animation: swing-in-top-fwd 1s both;
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
 }
 
 .mision h2,
 .vision h2 {
   text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 .directorio {
   color: #0d0007;
-  border-top: 1rem solid #0d0d0d
 }
 
 .directorio h2 {
   text-align: center;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  background-color: #0d0007;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  color: #f2f2f2;
 }
 
 .directorioGrid {
@@ -460,14 +606,29 @@ tbody tr:nth-child(odd) {
   width: auto;
 }
 
-.directorio h4 {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  font-weight: 500;
+.fade-in {
+  animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1.3s both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in2 {
+  animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
+}
+
+.fade-in3 {
+  animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 2.7s both;
 }
 
 /*Declaración áreas orchestra.html*/
-.contactoContainer {
+.contactoContainer2 {
   grid-area: contacto;
 }
 
@@ -482,13 +643,19 @@ tbody tr:nth-child(odd) {
   grid-template-columns: 1fr;
 }
 
-/*Estilo orchestra.html*/
 .h1orchestra {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Frank Ruhl Libre", serif;
   background-color: #0d0007;
   color: #f2f2f2;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  text-align: center;
+  letter-spacing: 1px;
+}
+
+.fade-in4 {
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
 }
 
 .orquesta1 {
@@ -519,30 +686,54 @@ tbody tr:nth-child(odd) {
 #concert {
   text-align: center;
   padding: 1.5rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 2rem;
 }
 
-.contactoContainer a {
+.contactoContainer2 {
+  margin-top: 2rem;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/sumate2-320.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.invitacion1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.75rem 1rem 0.75rem 1rem;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #73727288;
+  background-color: #2626269c;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
-.contactoContainer {
-  position: relative;
+.invitacion1 p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.invitacion1 a {
   display: inline-block;
-  text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  border: 3px solid #f2f2f2;
+}
+
+.invitacion1 a:hover {
+  background-color: #0d0007;
+  color: #ffffff;
 }
 
 /*Declaración áreas education.html*/
-.contactoContainer2 {
-  grid-area: contactoContainer2;
+.contactoContainer3 {
+  grid-area: contactoContainer3;
 }
 
 /*Diseño Grilla education.html*/
@@ -551,24 +742,28 @@ tbody tr:nth-child(odd) {
   grid-template-areas:
     "header"
     "main"
-    "contactoContainer2"
+    "contactoContainer3"
     "footer";
   grid-template-columns: 1fr;
 }
 
 /*Estilo education.html*/
 .h1Education {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Frank Ruhl Libre", serif;
   background-color: #0d0007;
   color: #f2f2f2;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: center;
+  letter-spacing: 1px;
 }
 
 .h2Education {
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 .educationAreas {
@@ -611,45 +806,48 @@ tbody tr:nth-child(odd) {
   font-weight: 400;
 }
 
-.contactoContainer2 {
-  margin: 0 auto;
-}
-
-.contactoContainer2 {
-  background-image: url(../img/sumate3.jpeg);
-  background-position: center;
+.contactoContainer3 {
+  margin-top: 2rem;
   width: 100%;
-  background-size: cover;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/sumate3-320.jpeg);
   background-repeat: no-repeat;
-  padding-top: 6.25rem;
-  padding-bottom: 6.25rem;
+  background-size: cover;
+  background-position: top;
+}
+
+.invitacion2 {
+  position: relative;
+  width: 80%;
+  max-height: 90%;
+  background-color: #2626269c;
+  color: #f2f2f2;
   text-align: center;
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
-.contactoContainer2 h2 {
-  padding-top: 0.5rem;
-  font-weight: 600;
-}
-
-.contactoContainer2 h2,
-.contactoContainer2 p {
-  background-color: #0d0d0d7e;
+.invitacion2 h2,
+.invitacion2 p {
   color: #ffffff;
   padding-bottom: 0.5rem;
 }
 
-.sumate3 {
-  padding-top: 1.25rem;
+.sumate3 a {
+  display: inline-block;
+  position: relative;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  border: 3px solid #f2f2f2;
 }
 
-.sumate3 a {
-  margin-top: 10px;
-  padding: 5px 10px 5px 10px;
-  font-weight: 600;
-  font-size: 24px;
-  background-color: #0d0d0d7e;
+.sumate3 a:hover {
+  background-color: #0d0007;
   color: #ffffff;
-  border: 3px solid #ffffff;
 }
 
 /*Declaración áreas join.html*/
@@ -674,11 +872,14 @@ tbody tr:nth-child(odd) {
 
 /*Estilos grilla join.html*/
 .h1Join {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Frank Ruhl Libre", serif;
   background-color: #0d0007;
   color: #f2f2f2;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: center;
+  letter-spacing: 1px;
 }
 
 .joinTitle p {
@@ -723,10 +924,12 @@ textarea {
 }
 
 @media (max-width: 767px) {
+  .imgIntro,
   .educationAreas img,
   .hide2,
   .hide3,
-  .hide4 {
+  .hide4,
+  .hide5 {
     display: none;
   }
 
@@ -737,6 +940,10 @@ textarea {
 
 /*MEDIDAS TABLET 768 A 1023*/
 @media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 1rem;
+  }
+
   header {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -759,12 +966,99 @@ textarea {
   }
 
   /*768 index.html*/
-  .frase {
-    font-size: 3rem;
+  .titleContainer {
+    display: flex;
+    max-width: 100%;
+    height: 70vh;
+    background-image: url(../img/carousel1-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
-  .presentacion h1 {
-    padding: 1.5rem 1rem 1.5rem 1rem;
+  .titleWrap {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .titleBoxContainer {
+    display: flex;
+    flex-direction: column;
+    color: #f2f2f2;
+    align-self: center;
+  }
+
+  .titleBox h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  .titleOptions {
+    height: 2.5rem;
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin: auto;
+    overflow: hidden;
+    font-weight: 500;
+  }
+
+  .titleOptions ul {
+    padding-left: 10px;
+    animation: cambiar 7s infinite;
+  }
+
+  .titleBox ul,
+  .titleBox p {
+    margin: 0;
+  }
+
+  @keyframes cambiar {
+    0% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: 0;
+    }
+
+    25% {
+      margin-top: -2.5rem;
+    }
+    50% {
+      margin-top: -2.5rem;
+    }
+
+    55% {
+      margin-top: -5rem;
+    }
+    80% {
+      margin-top: -5rem;
+    }
+
+    85% {
+      margin-top: -2.5rem;
+    }
+    95% {
+      margin-top: -2.5rem;
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  .button1 {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+    background-color: #0d0007;
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    font-family: "Frank Ruhl Libre", serif;
+  }
+
+  .bIntro a:hover {
+    background-color: #f2f2f2;
+    color: #0d0007;
   }
 
   .presentacion2 {
@@ -778,7 +1072,7 @@ textarea {
     align-content: center;
     justify-content: center;
     color: #f2f2f2;
-    background-color: #262626;
+    background-color: #0d0007;
   }
 
   .pIntro1,
@@ -797,6 +1091,16 @@ textarea {
 
   .centrar img {
     object-fit: contain;
+  }
+
+  .contactoContainer1 {
+    display: flex;
+    max-width: 100%;
+    height: 35vh;
+    background-image: url(../img/sumate1-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   /*768 about.html*/
@@ -834,6 +1138,17 @@ textarea {
     font-size: 1.7rem;
   }
 
+  .contactoContainer2 {
+    margin-top: 2rem;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    background-image: url(../img/sumate2-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   /*768 education.html*/
   .cursoTaller img,
   .creacionInvestigacion img,
@@ -851,7 +1166,7 @@ textarea {
   }
 
   .cuadroTexto {
-    background-color: #F21D2F;
+    background-color: #f21d2f;
     border-radius: 0.5rem;
     padding: 1rem;
   }
@@ -882,7 +1197,10 @@ textarea {
 
 /*MEDIDAS DESKTOP 1024 Y SS.*/
 @media (min-width: 1024px) {
-  /*1024 Index.html*/
+  body {
+    font-size: 1rem;
+  }
+
   header {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -902,14 +1220,107 @@ textarea {
     padding-left: 1rem;
     padding-right: 1rem;
     border-bottom-style: none;
+    font-size: 1rem;
   }
 
-  .frase {
-    font-size: 3.5rem;
+  /*1024 Index.html*/
+  .titleContainer {
+    display: flex;
+    max-width: 100%;
+    height: 70vh;
+    background-image: url(../img/carousel1-1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
-  .presentacion h1 {
-    padding: 1.5rem 1rem 1.5rem 1rem;
+  .titleWrap {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .titleBoxContainer {
+    display: flex;
+    flex-direction: column;
+    color: #f2f2f2;
+    align-self: center;
+  }
+
+  .titleBox h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .titleOptions {
+    height: 3rem;
+    color: #f2f2f2;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: auto;
+    overflow: hidden;
+    font-weight: 500;
+  }
+
+  .titleOptions ul {
+    padding-left: 10px;
+    animation: cambiar 7s infinite;
+  }
+
+  .titleBox ul,
+  .titleBox p {
+    margin: 0;
+  }
+
+  @keyframes cambiar {
+    0% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: 0;
+    }
+
+    25% {
+      margin-top: -3rem;
+    }
+    50% {
+      margin-top: -3rem;
+    }
+
+    55% {
+      margin-top: -6rem;
+    }
+    80% {
+      margin-top: -6rem;
+    }
+
+    85% {
+      margin-top: -3rem;
+    }
+    95% {
+      margin-top: -3rem;
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  .button1 {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+    background-color: #0d0007;
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    font-family: "Frank Ruhl Libre", serif;
+  }
+
+  .bIntro a:hover {
+    background-color: #f2f2f2;
+    color: #0d0007;
+  }
+
+  .titleBox h1 {
+    font-size: 5rem;
   }
 
   .presentacion2 {
@@ -923,7 +1334,7 @@ textarea {
     align-content: center;
     justify-content: center;
     color: #f2f2f2;
-    background-color: #262626;
+    background-color: #0d0007;
   }
 
   .pIntro1,
@@ -931,16 +1342,6 @@ textarea {
     text-align: center;
     font-size: 1.2rem;
     padding: 1.2rem;
-  }
-
-  .sumate {
-    padding-top: 6.8rem;
-    padding-bottom: 6.8rem;
-    text-align: center;
-  }
-
-  .sumate a {
-    font-size: 2rem;
   }
 
   .educacionGrid {
@@ -989,12 +1390,38 @@ textarea {
   .button2 {
     display: block;
     margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 13rem;
     text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: #262626c5;
+    background-color: #f2f2f2;
+    color: #0d0007;
+    border: 2px solid #0d0007;
+    font-family: "Frank Ruhl Libre", serif;
+  }
+
+  .clases1:hover,
+  .investigacion1:hover,
+  .extension1:hover {
+    opacity: 0.5;
+  }
+
+  .btn2 a:hover {
+    background-color: #0d0007;
     color: #f2f2f2;
-    border-radius: 0.313rem;
+    opacity: 1;
+  }
+
+  .contactoContainer1 {
+    display: flex;
+    max-width: 100%;
+    height: 35vh;
+    background-image: url(../img/sumate1-1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .footerGrid {
@@ -1015,6 +1442,29 @@ textarea {
   /*1024 about.html*/
   .h1About {
     color: #f2f2f2;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .textoAbout {
+    text-align: justify;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .p1About {
+    text-align: center;
+  }
+
+  .mvGrid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 1rem;
+    margin: 0rem 2rem 2rem 2rem;
+    text-align: justify;
+    font-size: 1rem;
   }
 
   .mision,
@@ -1031,14 +1481,9 @@ textarea {
     padding-bottom: 0.4375rem;
   }
 
-  .textoAbout {
-    text-align: justify;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  .p1About {
-    text-align: center;
+  .mision p,
+  .vision p {
+    padding: 0rem 1rem 0rem 1rem;
   }
 
   .directorio {
@@ -1047,7 +1492,8 @@ textarea {
   }
 
   .directorio h2 {
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .directorioGrid {
@@ -1079,10 +1525,30 @@ textarea {
   .igorCV,
   .pepaCV,
   .kariCV {
-    border: 2px solid #f20505;
-    border-radius: 0.5rem;
+    border: 2px solid #0d0007;
+    border-radius: 0.3rem;
   }
 
+  .fade-in {
+    animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in2 {
+    animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 1.4s both;
+  }
+
+  .fade-in3 {
+    animation: fade-in 1.9s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
+  }
   /*1024 education.html*/
   .educationAreas {
     display: grid;
@@ -1118,18 +1584,42 @@ textarea {
     margin-top: 2rem;
   }
 
-  .contactoContainer a {
-    font-size: 2.5rem;
+  .contactoContainer2 {
+    margin-top: 2rem;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    background-image: url(../img/sumate2-1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   /*1024 join.html*/
-  .joinTitle p {
-    padding: 2.5rem 2.5rem 0rem 2.5rem;
+  .cajaJoin {
+    padding: 2.5rem;
+    margin: 2rem 2rem 0rem 2rem;
   }
 
   .galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0.5rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    align-content: center;
+  }
+
+  .galeria p {
+    margin-left: 2rem;
+    color: #f2f2f2;
+    background-color: #0d0007;
+    padding: 2rem;
+  }
+
+  .pJoin2 {
+    margin: 0rem 2rem 0.5rem 2rem;
+    text-align: center;
   }
 }

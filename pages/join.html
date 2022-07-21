@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Súmate- Corporación Cultural Eufonía</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&family=Montserrat:wght@300;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="shortcut icon" href="../img/faviconlira.png" />
@@ -47,19 +49,45 @@
     <!--Inicio contenido-->
 
     <div class="joinTitle">
-      <h1 class="h1Join">SÚMATE</h1>
-      <p>
-        Nuestro compromiso con la sociedad es el acercar la cultura y las artes a los distintos territorios, a través
-        de actividades de extensión y vonculación con el medio, así como generando los espacios necesarios para el
-        desarrollo de artistas.
-      </p>
+      <h1 class="h1Join tracking-in-expand">SÚMATE</h1>
+      <div class="cajaJoin">
+        <p>
+          Nuestro compromiso con la sociedad es el acercar la cultura y las artes a los distintos territorios, a través
+          de actividades de extensión y vinculación con el medio, así como generando los espacios necesarios para el
+          desarrollo de artistas.
+        </p>
+        <p>Es así como nuestra orquesta se ha dedicado a realizar conciertos gratuitos para la comunidad, especialmente
+          en aquellos espacios en los que la presentación de música docta no consigue llegar, debido a los costos que
+          implica movilizar a tantos músicos, la dificultad de encontrar espacio adecuado para instalar orquestas
+          sinfónicas, así como la coordinación de días y horarios que hagan accesible la consurrencia de diversos
+          públicos.<br>
+        </p>
+      </div>
     </div>
 
     <section class="galeria">
       <img src="../img/galeria1.jpg" alt="">
-      <img class="hide4" src="../img/galeria4.jpeg" alt="">
+      <div data-aos="flip-up">
+        <p>Orquesta Sinfónica en Iglesia San Saturnino, Barrio Yungay. Este programa fue dirigido por el director
+          invitado Sebastián Moya.</p>
+      </div>
+
+      <img src="../img/galeria4.jpeg" alt="">
+      <div data-aos="flip-up">
+        <p>Fagotistas de nuestra orquesta, en presentación en Plaza Victor Jara de El Tabo, Región de Valparaíso.</p>
+      </div>
+
       <img class="hide2" src="../img/galeria2.jpg" alt="">
+      <div data-aos="flip-up">
+        <p>Orquesta Sinfónica en presentación en la Facultad de Medicina de la Universidad de Chile, año 2019</p>
+      </div>
+
       <img class="hide3" src="../img/galeria3.jpg" alt="">
+      <div data-aos="flip-up">
+        <p>Ensayo de la Orquesta Sinfónica en la Sede de la Universidad Academia de Humanismo Cristiano, bajo la
+          dirección
+          del Director Titular y presidente de la Corporación, Igor Osses.</p>
+      </div>
     </section>
 
     <main>
@@ -67,7 +95,8 @@
         <div class="introFormulario">
           <p class="pJoin2">Si tienes algún proyecto en mente, si estás en búsqueda de profesores de instrumento, o si
             simplemente quieres ponerte en contacto con nosotros, por favor, completa este formulario y te responderemos
-            a la brevedad posible.
+            a la brevedad posible.<br>
+            ¡Estaremos encantados de conocerte!
           </p>
         </div>
         <!--Formulario de contacto-->
@@ -129,6 +158,12 @@
       </div>
     </footer>
   </section>
+
+  <!--Scripts-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

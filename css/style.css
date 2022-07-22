@@ -1084,27 +1084,6 @@ textarea {
     color: #0d0007;
   }
 
-  /*.presentacion2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin-top: 3rem;
-    column-gap: 1rem;
-  }
-
-  .textoIntro {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    color: #f2f2f2;
-  }
-
-  .introBox {
-    background-color: #0d0007;
-    padding: 1rem;
-  }*/
-
   .presentacion2 {
     display: grid;
     grid-template-columns: 1fr 1fr;

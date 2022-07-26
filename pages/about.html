@@ -6,12 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nosotros- Corporación Cultural Eufonía</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&family=Montserrat:wght@300;600&display=swap"
     rel="stylesheet">
+
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="shortcut icon" href="../img/faviconlira.png" />
 </head>
@@ -20,30 +23,34 @@
   <section class="aboutGrid">
     <!--Logo y barra de navegación-->
     <header>
-      <section class="logo">
-        <a href="../index.html"><img src="../img/logo200.png" alt="" /></a>
-      </section>
-      <section class="navbar">
-        <nav>
-          <ul>
-            <li>
-              <a id="index" href="../index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="about.html">Nosotros</a>
-            </li>
-            <li>
-              <a href="orchestra.html">Orquesta</a>
-            </li>
-            <li>
-              <a href="education.html">Educación</a>
-            </li>
-            <li>
-              <a href="join.html">Súmate</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo200.png" alt="Eufonía"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item mx-3">
+                <a class="nav-link" id="index" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="about.html">Nosotros</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="orchestra.html">Orquesta</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="education.html">Educación</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="join.html">Súmate</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!--Inicio contenido-->
@@ -91,9 +98,6 @@
       <section class="directorio">
         <h2>MESA DIRECTIVA</h2>
         <div class="directorioGrid">
-
-
-
           <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
             data-aos-duration="2000">
             <div class="igor">
@@ -103,10 +107,8 @@
               <div class="igorCV">
                 <h3>Igor Osses<br>
                   Presidente</h3>
-                <p>Igor Osses inició sus estudios musicales como violista en la Escuela Básica Los Nogales. Siguió sus
-                  estudios en violín de manera particular. Estudió Pedagogía en Música en la Universidad Metropolitana
-                  de
-                  Ciencias de la Educación (UMCE), y cursó un magister en Dirección Orquestal en la misma casa de
+                <p>Igor Osses es violinista. Estudió Pedagogía en Música en la Universidad Metropolitana
+                  de Ciencias de la Educación (UMCE), y cursó un magister en Dirección Orquestal en la misma casa de
                   estudios. Fue gestor de Réquiem por Chile en el año 2019 e impulsor para la conformación de
                   Corporación
                   Eufonía.</p>
@@ -114,7 +116,7 @@
             </div>
           </div>
 
-          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
             data-aos-duration="2000">
             <div class="pepa">
               <div class="pepaFoto">
@@ -132,7 +134,7 @@
             </div>
           </div>
 
-          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="700" data-aos-offset="0"
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
             data-aos-duration="2000">
             <div class="kari">
               <div class="kariFoto">
@@ -178,6 +180,12 @@
   </section>
 
   <!--Scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

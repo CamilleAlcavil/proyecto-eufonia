@@ -74,7 +74,6 @@ ul {
 }
 
 img {
-  height: 100%;
   width: 100%;
 }
 
@@ -479,11 +478,10 @@ tbody tr:nth-child(odd) {
   font-size: 1rem;
 }
 
-.mision,
-.vision {
-  padding: 0rem 1rem 1rem 1rem;
-  border: 0.3rem solid #0d0007;
-  border-radius: 0.3rem;
+.card-header {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.2rem;
+  background-color: #0d0007;
 }
 
 .swing-in-top-fwd {
@@ -501,15 +499,6 @@ tbody tr:nth-child(odd) {
     transform-origin: top;
     opacity: 1;
   }
-}
-
-.mision h2,
-.vision h2 {
-  text-align: center;
-  font-family: "Frank Ruhl Libre", serif;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  letter-spacing: 1px;
 }
 
 .directorio {
@@ -718,50 +707,16 @@ tbody tr:nth-child(odd) {
   font-size: 1.8rem;
 }
 
-.educationAreas {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.cursoTaller,
-.creacionInvestigacion,
-.extension {
-  background-color: #0d0007;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.creacionInvestigacion {
-  height: 100%;
-}
-
-.cursoTaller h3,
-.creacionInvestigacion h3,
-.extension h3 {
-  text-align: center;
-  font-weight: bold;
-}
-
-.cursoTaller p,
-.creacionInvestigacion p,
-.extension p {
-  text-align: justify;
-  padding-top: 1rem;
-}
-
-.sublista {
-  padding-left: 1.2rem;
-}
-
 .sublista li {
   list-style: circle;
-  padding-left: 0.5rem;
-  text-align: justify;
-  font-weight: 400;
+}
+
+.cardEducation {
+  background-color: #0d0007;
+}
+
+.card-title {
+  font-family: "Frank Ruhl Libre", serif;
 }
 
 .contactoContainer3 {
@@ -856,7 +811,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form {
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   text-align: center;
   border: 3px solid #0d0007;
 }
@@ -887,8 +842,6 @@ textarea {
 
 @media (max-width: 767px) {
   .imgIntro,
-  .educationAreas img,
-  .hide4,
   .hide5 {
     display: none;
   }
@@ -1002,33 +955,6 @@ textarea {
     color: #0d0007;
   }
 
-  .presentacion2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3rem;
-  }
-
-  .textoIntro {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin-left: 1rem;
-    color: #f2f2f2;
-    background-color: #0d0007;
-  }
-
-  .imgIntro {
-    object-fit: fill;
-  }
-
-  .pIntro1,
-  .pIntro2 {
-    text-align: center;
-    font-size: 1rem;
-    padding: 1rem;
-  }
-
   .centrar {
     display: flex;
     flex-direction: column;
@@ -1051,12 +977,9 @@ textarea {
   }
 
   /*768 about.html*/
-  .mision,
-  .vision {
-    margin-left: 4rem;
-    margin-right: 4rem;
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    border-radius: 0.5rem;
+  .card-header {
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 1.5rem;
   }
 
   .directorioGrid {
@@ -1107,31 +1030,6 @@ textarea {
   }
 
   /*768 education.html*/
-  .cursoTaller img,
-  .creacionInvestigacion img,
-  .extension img {
-    object-fit: none;
-    width: auto;
-    height: auto;
-  }
-
-  .cursoTaller,
-  .creacionInvestigacion,
-  .extension {
-    text-align: center;
-    background-color: #ffffff;
-  }
-
-  .cuadroTexto {
-    background-color: #0d0007;
-    padding: 1.8rem 2rem 1.8rem 2rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-
-  .sublista {
-    padding-top: 0.5rem;
-  }
 
   /*768 join.html*/
   .joinTitle p {
@@ -1262,33 +1160,6 @@ textarea {
     font-size: 5rem;
   }
 
-  .presentacion2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3rem;
-  }
-
-  .textoIntro {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin-left: 1rem;
-    color: #f2f2f2;
-    background-color: #0d0007;
-  }
-
-  .introBox {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .pIntro1,
-  .pIntro2 {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1.2rem;
-  }
-
   .educacionGrid {
     margin-bottom: 1rem;
   }
@@ -1406,29 +1277,7 @@ textarea {
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    row-gap: 1rem;
-    margin: 0rem 2rem 2rem 2rem;
     text-align: justify;
-    font-size: 1rem;
-  }
-
-  .mision,
-  .vision {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-
-  .mision h2,
-  .vision h2 {
-    text-align: center;
-    padding-bottom: 0.4375rem;
-  }
-
-  .mision p,
-  .vision p {
-    padding: 0rem 1rem 0rem 1rem;
   }
 
   .directorio {
@@ -1475,23 +1324,6 @@ textarea {
   }
 
   /*992 education.html*/
-  .educationAreas {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  .cursoTaller,
-  .creacionInvestigacion,
-  .extension {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
-  .cuadroTexto {
-    padding: 4rem 2rem 4rem 2rem;
-  }
 
   /*992 orchestra.html*/
   .orquesta1,

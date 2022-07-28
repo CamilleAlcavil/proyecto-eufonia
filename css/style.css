@@ -596,36 +596,6 @@ tbody tr:nth-child(odd) {
   }
 }
 
-.orquesta1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: #0d0d0d;
-  padding: 1.5rem 1.5rem 0rem 1.5rem;
-}
-
-.resena {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.resena h2 {
-  text-align: center;
-}
-
-.resena p {
-  text-align: justify;
-  padding-top: 1rem;
-}
-
-.orquesta2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: #0d0d0d;
-  padding: 1.5rem;
-}
-
 #concert {
   text-align: center;
   padding: 1.5rem;
@@ -709,10 +679,6 @@ tbody tr:nth-child(odd) {
 
 .sublista li {
   list-style: circle;
-}
-
-.cardEducation {
-  background-color: #0d0007;
 }
 
 .card-title {
@@ -841,7 +807,6 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  .imgIntro,
   .hide5 {
     display: none;
   }
@@ -997,23 +962,6 @@ textarea {
   }
 
   /*768 orchestra.html*/
-  .orquesta1,
-  .orquesta2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.8rem;
-    align-items: center;
-  }
-
-  .orquesta1 img,
-  .orquesta2 img {
-    object-fit: contain;
-  }
-
-  .orquesta2 {
-    margin-top: 2rem;
-  }
-
   .contactoContainer a {
     font-size: 1.7rem;
   }
@@ -1218,10 +1166,33 @@ textarea {
     font-family: "Frank Ruhl Libre", serif;
   }
 
-  .clases1:hover,
-  .investigacion1:hover,
-  .extension1:hover {
-    opacity: 0.5;
+  .backgroundHover .clases1,
+  .backgroundHover .investigacion1,
+  .backgroundHover .extension1 {
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .backgroundHover .clases1:hover img,
+  .backgroundHover .investigacion1:hover img,
+  .backgroundHover .extension1:hover img {
+    opacity: 1;
+    transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+    -moz-transform: scale(1.15, 1.15);
+    -ms-transform: scale(1.15, 1.15);
+    -o-transform: scale(1.15, 1.15);
+  }
+
+  .backgroundHover img {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   .btn2 a:hover {
@@ -1326,28 +1297,6 @@ textarea {
   /*992 education.html*/
 
   /*992 orchestra.html*/
-  .orquesta1,
-  .orquesta2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.8rem;
-    align-items: center;
-  }
-
-  .orquesta1 img,
-  .orquesta2 img {
-    object-fit: contain;
-  }
-
-  .resena p {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .orquesta2 {
-    margin-top: 2rem;
-  }
-
   .contactoContainer2 {
     margin-top: 2rem;
     width: 100%;

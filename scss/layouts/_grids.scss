@@ -1,0 +1,30 @@
+header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  footer {
+    grid-area: footer;
+  }
+  
+  /*index.html*/
+  .indexGrid {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "cartelera"
+      "sumate"
+      "footer";
+  
+    .cartelera {
+      grid-area: cartelera;
+    }
+  
+    .contacto1 {
+      grid-area: sumate;
+    }
+  }

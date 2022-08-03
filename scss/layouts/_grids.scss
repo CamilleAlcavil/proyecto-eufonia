@@ -1,30 +1,39 @@
 header {
-    grid-area: header;
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+//Diseño Grilla index.html
+.indexGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "cartelera"
+    "sumate"
+    "footer";
+
+  .cartelera {
+    grid-area: cartelera;
   }
-  
-  main {
-    grid-area: main;
+
+  .contacto1 {
+    grid-area: sumate;
   }
-  
-  footer {
-    grid-area: footer;
-  }
-  
-  /*index.html*/
-  .indexGrid {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "main"
-      "cartelera"
-      "sumate"
-      "footer";
-  
-    .cartelera {
-      grid-area: cartelera;
-    }
-  
-    .contacto1 {
-      grid-area: sumate;
-    }
-  }
+}
+
+//Diseño Grilla about.html
+.aboutGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}

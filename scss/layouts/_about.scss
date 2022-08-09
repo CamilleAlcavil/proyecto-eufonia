@@ -29,7 +29,7 @@
   margin: 1rem 2rem 3rem 2rem;
   text-align: justify;
 
-  @media (min-width: 992px) {
+  @include desktop {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     font-size: 1rem;
@@ -41,11 +41,11 @@
   font-size: 1.2rem;
   background-color: #0d0007;
 
-  @media (min-width: 768px) {
+  @include tablet {
     font-size: 1.5rem;
   }
 
-  @media (min-width: 992px) {
+  @include desktop {
     font-size: 1.7rem;
   }
 }
@@ -74,6 +74,7 @@
 
 .directorio {
   background-color: $color-secondary;
+  padding-bottom: 2rem;
 
   img {
     width: 70%;
@@ -87,7 +88,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 1rem;
 
-  @media (min-width: 992px) {
+  @include desktop {
     margin-top: 1rem;
   }
 
@@ -106,7 +107,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
 
-  @media (min-width: 992px) {
+  @include desktop {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-content: center;

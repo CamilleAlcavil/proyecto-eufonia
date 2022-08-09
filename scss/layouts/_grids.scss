@@ -37,3 +37,37 @@ footer {
     "main"
     "footer";
 }
+
+//Diseño Grilla orchestra.html
+.orchestraGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "invitacion"
+    "contacto"
+    "footer";
+  grid-template-columns: 1fr;
+
+  .invitacion {
+    grid-area: invitacion;
+  }
+
+  .contactoContainer2 {
+    grid-area: contacto;
+  }
+}
+
+//Diseño Grilla education.html
+.educationGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "contactoContainer3"
+    "footer";
+    
+  .contactoContainer3 {
+    grid-area: contactoContainer3;
+  }
+}

@@ -1,9 +1,16 @@
 //Variables
 @import "../scss/utilities/variables";
 
-//Partials
-@import "../scss/layouts/boilerplate";
+//Utilities
+@import "../scss/utilities/breakpoints";
+@import "../scss/utilities/mixins";
+@import "../scss/utilities/extends";
+
+//Layout
 @import "../scss/layouts/grids";
+@import "../scss/layouts/boilerplate";
 @import "../scss/layouts/typography";
 @import "../scss/layouts/index";
 @import "../scss/layouts/about";
+@import "../scss/layouts/orchestra";
+@import "../scss/layouts/education";

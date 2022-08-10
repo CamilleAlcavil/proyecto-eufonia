@@ -97,7 +97,7 @@ footer {
     margin-bottom: 1rem;
     align-items: center;
 
-    @include desktop{
+    @include desktop {
       flex-direction: row;
       justify-content: space-around;
     }

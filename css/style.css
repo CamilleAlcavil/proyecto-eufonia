@@ -107,7 +107,7 @@ footer {
 .indexGrid .cartelera {
   grid-area: cartelera;
 }
-.indexGrid .contacto1 {
+.indexGrid .contacto {
   grid-area: sumate;
 }
 
@@ -324,7 +324,7 @@ ul {
   padding: 0;
 }
 
-a {
+a, .educacionGrid .card-img-overlay {
   text-decoration: none;
   color: #0d0d0d;
 }
@@ -337,7 +337,7 @@ a {
 .titleContainer {
   display: flex;
   max-width: 100%;
-  height: 70vh;
+  height: 85vh;
   background-image: url(../img/carousel1-320.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -507,6 +507,25 @@ a {
   width: 90%;
   margin: 0 auto;
 }
+.presentacionA h1 {
+  text-align: center;
+  padding: 2rem 1rem 2rem 1rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.65rem;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+  color: #0d0007;
+}
+@media (min-width: 768px) {
+  .presentacionA h1 {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .presentacionA h1 {
+    font-size: 2.5rem;
+  }
+}
 
 .presentacionB {
   width: 100%;
@@ -517,100 +536,43 @@ a {
     width: 95%;
   }
 }
+.presentacionB h1 {
+  text-align: center;
+  padding: 2rem 1rem 2rem 1rem;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.65rem;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+  color: #0d0007;
+}
+@media (min-width: 768px) {
+  .presentacionB h1 {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .presentacionB h1 {
+    font-size: 2.5rem;
+  }
+}
 
 .educacionGrid {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #f2f2f2;
 }
-
-.subtitulo1 {
-  margin: 0;
-  text-align: center;
-  color: #0d0d0d;
+.educacionGrid .card-img-overlay {
+  color: #ffffff;
+  background-color: rgba(13, 13, 13, 0.7411764706);
+  margin-top: 60%;
+}
+.educacionGrid .card-img-overlay h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0.5rem;
 }
 
-@media (min-width: 768px) {
-  .centrar {
-    margin-left: 13rem;
-    margin-right: 13rem;
-  }
-}
-@media (min-width: 992px) {
-  .centrar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 0.625rem;
-    margin: 0.75rem;
-  }
-}
-.centrar img {
-  display: block;
-}
-@media screen and (max-width: 767px) {
-  .centrar img {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .centrar img {
-    object-fit: contain;
-  }
-}
-.centrar .button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 13rem;
-  background-color: #f2f2f2;
-}
-.centrar .button:hover {
-  background-color: #0d0007;
-  color: #f2f2f2;
-  opacity: 1;
-}
-
-@media (min-width: 992px) {
-  .clases1,
-.investigacion1,
-.extension1 {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  }
-  .clases1 a,
-.investigacion1 a,
-.extension1 a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: #262626;
-  }
-  .backgroundHover {
-    float: left;
-    padding: 0px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
-  }
-  .backgroundHover:hover img {
-    opacity: 1;
-    transform: scale(1.15, 1.15);
-    -webkit-transform: scale(1.15, 1.15);
-    -moz-transform: scale(1.15, 1.15);
-    -ms-transform: scale(1.15, 1.15);
-    -o-transform: scale(1.15, 1.15);
-  }
-  .backgroundHover img {
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-}
 .cartelera {
   display: flex;
   flex-direction: column;

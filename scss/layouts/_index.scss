@@ -3,20 +3,15 @@
   text-align: center;
 }
 
-.titleContainer {
-  display: flex;
-  max-width: 100%;
-  height: 85vh;
+.titleContainer1 {
+  @include banner-img;
   background-image: url(../img/carousel1-320.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
-  @media (min-width: 768px) {
+  @include tablet {
     background-image: url(../img/carousel1-768.jpg);
   }
 
-  @media (min-width: 992px) {
+  @include desktop {
     background-image: url(../img/carousel1-1024.jpg);
   }
 }
@@ -39,11 +34,11 @@
   font-family: "Montserrat", sans-serif;
   padding: 0;
 
-  @media (min-width: 768px) {
+  @include tablet {
     font-size: 3rem;
   }
 
-  @media (min-width: 992px) {
+  @include desktop {
     font-size: 3.5rem;
   }
 }
@@ -182,25 +177,42 @@
   }
 }
 
-.presentacionA {
-  width: 90%;
-  margin: 0 auto;
+.introCorporacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 
   h1 {
     @include h1-style-2;
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include desktop {
+    padding: 4rem 0rem 4rem 0rem;
   }
 }
+.presentacionTexto {
+  align-self: center;
+  justify-self: center;
 
-.presentacionB {
-  width: 100%;
-  margin: 0 auto;
+  .botonesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    margin: 0rem 3rem 0rem 3rem;
 
-  @media (min-width: 992px) {
-    width: 95%;
-  }
+    .button {
+      width: 10rem;
+      justify-self: center;
 
-  h1 {
-    @include h1-style-2;
+      @include tablet {
+        width: 13rem;
+      }
+    }
   }
 }
 
@@ -209,17 +221,47 @@
   grid-template-columns: 1fr;
   background-color: $color-secondary;
 
+  .educacionGridTexto {
+    @include tablet {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      padding-top: 2rem;
+    }
+  }
+
   .card-img-overlay {
     @extend a;
     color: $color-default;
     background-color: #0d0d0dbd;
     margin-top: 60%;
 
+    &:hover {
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+
     h5 {
       font-family: $font-primary;
       font-weight: bold;
       text-align: left;
       padding-left: 0.5rem;
+    }
+  }
+
+  .card {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.15, 1.15);
+      -webkit-transform: scale(1.15, 1.15);
+      -moz-transform: scale(1.15, 1.15);
+      -ms-transform: scale(1.15, 1.15);
+      -o-transform: scale(1.15, 1.15);
     }
   }
 }

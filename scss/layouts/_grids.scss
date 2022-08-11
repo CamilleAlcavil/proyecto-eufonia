@@ -71,3 +71,13 @@ footer {
     grid-area: contactoContainer3;
   }
 }
+
+//Diseño Grilla join.html
+.joinGrid {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "joinTitle"
+  "main"
+  "footer";
+}

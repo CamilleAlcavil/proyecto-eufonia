@@ -136,6 +136,11 @@ footer {
   grid-area: contactoContainer3;
 }
 
+.joinGrid {
+  display: grid;
+  grid-template-areas: "header" "joinTitle" "main" "footer";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -334,22 +339,22 @@ a, .educacionGrid .card-img-overlay {
   text-align: center;
 }
 
-.titleContainer {
+.titleContainer1 {
   display: flex;
   max-width: 100%;
   height: 85vh;
-  background-image: url(../img/carousel1-320.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: url(../img/carousel1-320.jpg);
 }
 @media (min-width: 768px) {
-  .titleContainer {
+  .titleContainer1 {
     background-image: url(../img/carousel1-768.jpg);
   }
 }
 @media (min-width: 992px) {
-  .titleContainer {
+  .titleContainer1 {
     background-image: url(../img/carousel1-1024.jpg);
   }
 }
@@ -366,19 +371,19 @@ a, .educacionGrid .card-img-overlay {
   align-self: center;
 }
 
-.h2Title {
+.h2Title, .titleContainer3 h1, .titleContainer2 h1 {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   padding: 0;
 }
 @media (min-width: 768px) {
-  .h2Title {
+  .h2Title, .titleContainer3 h1, .titleContainer2 h1 {
     font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
-  .h2Title {
+  .h2Title, .titleContainer3 h1, .titleContainer2 h1 {
     font-size: 3.5rem;
   }
 }
@@ -503,11 +508,12 @@ a, .educacionGrid .card-img-overlay {
     }
   }
 }
-.presentacionA {
-  width: 90%;
-  margin: 0 auto;
+.introCorporacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 }
-.presentacionA h1 {
+.introCorporacion h1 {
   text-align: center;
   padding: 2rem 1rem 2rem 1rem;
   font-family: "Frank Ruhl Libre", serif;
@@ -517,42 +523,44 @@ a, .educacionGrid .card-img-overlay {
   color: #0d0007;
 }
 @media (min-width: 768px) {
-  .presentacionA h1 {
+  .introCorporacion h1 {
     font-size: 2.3rem;
   }
 }
 @media (min-width: 992px) {
-  .presentacionA h1 {
+  .introCorporacion h1 {
     font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .introCorporacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .introCorporacion {
+    padding: 4rem 0rem 4rem 0rem;
   }
 }
 
-.presentacionB {
-  width: 100%;
-  margin: 0 auto;
+.presentacionTexto {
+  align-self: center;
+  justify-self: center;
 }
-@media (min-width: 992px) {
-  .presentacionB {
-    width: 95%;
-  }
+.presentacionTexto .botonesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  margin: 0rem 3rem 0rem 3rem;
 }
-.presentacionB h1 {
-  text-align: center;
-  padding: 2rem 1rem 2rem 1rem;
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 1.65rem;
-  letter-spacing: 1px;
-  background-color: #ffffff;
-  color: #0d0007;
+.presentacionTexto .botonesGrid .button {
+  width: 10rem;
+  justify-self: center;
 }
 @media (min-width: 768px) {
-  .presentacionB h1 {
-    font-size: 2.3rem;
-  }
-}
-@media (min-width: 992px) {
-  .presentacionB h1 {
-    font-size: 2.5rem;
+  .presentacionTexto .botonesGrid .button {
+    width: 13rem;
   }
 }
 
@@ -561,16 +569,42 @@ a, .educacionGrid .card-img-overlay {
   grid-template-columns: 1fr;
   background-color: #f2f2f2;
 }
+@media (min-width: 768px) {
+  .educacionGrid .educacionGridTexto {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-top: 2rem;
+  }
+}
 .educacionGrid .card-img-overlay {
   color: #ffffff;
   background-color: rgba(13, 13, 13, 0.7411764706);
   margin-top: 60%;
+}
+.educacionGrid .card-img-overlay:hover {
+  background-color: #0d0007;
+  color: #f2f2f2;
 }
 .educacionGrid .card-img-overlay h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-align: left;
   padding-left: 0.5rem;
+}
+.educacionGrid .card {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.educacionGrid .card:hover {
+  opacity: 1;
+  transform: scale(1.15, 1.15);
+  -webkit-transform: scale(1.15, 1.15);
+  -moz-transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15);
+  -o-transform: scale(1.15, 1.15);
 }
 
 .cartelera {
@@ -713,18 +747,29 @@ a, .educacionGrid .card-img-overlay {
   }
 }
 
-.fade-in {
-  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
+.titleContainer2 {
+  display: flex;
+  max-width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/orchestra1-320.jpg);
+}
+@media (min-width: 768px) {
+  .titleContainer2 {
+    background-image: url(../img/orchestra1-768.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .titleContainer2 {
+    background-image: url(../img/orchestra1-1024.jpg);
+  }
+}
+.titleContainer2 h1 {
+  background-color: rgba(0, 0, 0, 0.3215686275);
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #concert {
   text-align: center;
   padding: 1.5rem;
@@ -757,6 +802,138 @@ a, .educacionGrid .card-img-overlay {
 
 .card-title {
   font-family: "Frank Ruhl Libre", serif;
+}
+
+.joinTitle {
+  background-color: #f2f2f2;
+}
+
+.titleContainer3 {
+  display: flex;
+  max-width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/join-320.jpg);
+}
+@media (min-width: 768px) {
+  .titleContainer3 {
+    background-image: url(../img/join-768.jpg);
+  }
+}
+@media (min-width: 992px) {
+  .titleContainer3 {
+    background-image: url(../img/join-1024.jpg);
+  }
+}
+.titleContainer3 h1 {
+  background-color: rgba(0, 0, 0, 0.3215686275);
+}
+
+.aportesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f2f2f2;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .aportesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .aportesGrid {
+    padding: 4rem 0rem 4rem 0rem;
+  }
+}
+.aportesGrid .aporte {
+  align-self: center;
+}
+.aportesGrid .botonesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  margin: 0rem 3rem 0rem 3rem;
+  justify-items: center;
+}
+@media (min-width: 992px) {
+  .aportesGrid .botonesGrid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+}
+.aportesGrid .botonesGrid .button {
+  width: 10rem;
+}
+@media (min-width: 768px) {
+  .aportesGrid .botonesGrid .button {
+    width: 13rem;
+  }
+}
+
+.introFormulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f2f2f2;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .introFormulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .introFormulario {
+    padding: 4rem 0rem 4rem 0rem;
+  }
+}
+.introFormulario .contactanos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introFormulario .buttonContactanos {
+  align-self: center;
+  justify-self: center;
+}
+.introFormulario .buttonContactanos .button {
+  width: 10rem;
+}
+@media (min-width: 768px) {
+  .introFormulario .buttonContactanos .button {
+    width: 13rem;
+  }
+}
+
+.form {
+  padding: 1.5rem 0rem 2rem 0rem;
+  text-align: center;
+  background-color: #0d0007;
+}
+.form h2 {
+  color: #f2f2f2;
+  border-bottom: solid #f2f2f2;
+}
+
+form {
+  width: 100%;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea {
+  padding: 2px;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

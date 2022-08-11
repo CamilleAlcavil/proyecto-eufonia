@@ -1,0 +1,125 @@
+.joinTitle {
+  background-color: $color-secondary;
+}
+
+.titleContainer3 {
+  @include banner-img;
+  background-image: url(../img/join-320.jpg);
+
+  @include tablet {
+    background-image: url(../img/join-768.jpg);
+  }
+
+  @include desktop {
+    background-image: url(../img/join-1024.jpg);
+  }
+
+  h1 {
+    @extend .h2Title;
+    background-color: #00000052;
+  }
+}
+
+.aportesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $color-secondary;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @include desktop {
+    padding: 4rem 0rem 4rem 0rem;
+  }
+
+  .aporte {
+    align-self: center;
+  }
+
+  .botonesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    margin: 0rem 3rem 0rem 3rem;
+    justify-items: center;
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+    }
+
+    .button {
+      width: 10rem;
+
+      @include tablet {
+        width: 13rem;
+      }
+    }
+  }
+}
+
+.introFormulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $color-secondary;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @include desktop {
+    padding: 4rem 0rem 4rem 0rem;
+  }
+
+  .contactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .buttonContactanos {
+    align-self: center;
+    justify-self: center;
+
+    .button {
+      width: 10rem;
+
+      @include tablet {
+        width: 13rem;
+      }
+    }
+  }
+}
+
+.form {
+  padding: 1.5rem 0rem 2rem 0rem;
+  text-align: center;
+  background-color: $color-primary;
+  h2 {
+    color: $color-secondary;
+    border-bottom: solid $color-secondary;
+  }
+}
+
+form {
+  width: 100%;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  box-sizing: border-box;
+  color: $color-default;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea {
+  padding: 2px;
+  margin: 10px;
+  font-family: $font-primary;
+}

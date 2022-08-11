@@ -10,14 +10,14 @@
     content="Corporación Cultural Eufonía es una asociación sin fines de lucro que busca democratizar el acceso a las artes y las culturas a través de la generación de espacios formativos y de vinculación con el medio.">
   <meta name="keywords"
     content="corporación eufonía, cultura, arte, música, orquesta, UAHC, cursos, talleres, creación, investigación, conciertos">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&family=Montserrat:wght@300;600&display=swap"
     rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="shortcut icon" href="./img/faviconlira.png" />
 </head>
@@ -29,14 +29,13 @@
     <header>
       <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img class="logo" src="./img/logo200.png"
-              alt="Corporación Cultural Eufonía"></a>
+          <a class="navbar-brand" href="index.html"><img class="logo" src="./img/logo200.png" alt="Eufonía"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav fw-bold">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
               </li>
@@ -61,7 +60,7 @@
     <!--Sección Presentación-->
     <main>
       <section class="presentacion">
-        <div class="titleContainer ">
+        <div class="titleContainer1">
           <div class="titleWrap">
             <div class="titleBoxContainer">
               <div class="titleBox">
@@ -80,95 +79,74 @@
 
         <!--Inicio contenido-->
 
-        <section class="presentacionA">
-          <div class="card d-md-none mt-5 mb-5 me-3 ms-3">
-            <img src="./img/portadaDesktop.jpg" class="card-img-top" alt="Orquesta en ensayo">
-            <div class="card-body">
-              <h1>CORPORACIÓN CULTURAL</h1>
-              <p class="card-text text-center">Somos una corporación chilena sin fines de lucro que trabaja
-                para disminuir las brechas de acceso al conocimiento y aprendizaje de las artes, generando instancias
-                participativas entre artistas y públicos, con el objetivo de fomentar el desarrollo artístico del país.
-              </p>
-              <p class="card-text text-center">Para conocer más sobre nuestro trabajo, haz click en el
-                siguiente link:</p>
-              <a class="button" href="./pages/about.html">Ver más</a>
+        <section class="introCorporacion">
+          <div class="presentacionImg">
+            <img src="./img/portadaDesktop.jpg" alt="Orquesta en ensayo">
+          </div>
+          <div class="presentacionTexto">
+            <h1>CORPORACIÓN CULTURAL</h1>
+            <p>Somos una corporación chilena sin fines de lucro que trabaja
+              para disminuir las brechas de acceso al conocimiento y aprendizaje de las artes, generando instancias
+              participativas entre artistas y públicos, con el objetivo de fomentar el desarrollo artístico del país.
+            </p>
+            <div class="botonesGrid">
+              <a class="button" href="./pages/about.html">VER MÁS</a>
             </div>
           </div>
         </section>
 
-        <section class="presentacionB">
-          <div class="card d-none d-md-block mt-5 mb-5 me-3 ms-3">
-            <div class="row">
-              <div class="d-none d-md-block col-md-6">
-                <img src="./img/portadaDesktop.jpg" class="rounded-start" alt="Orquesta en ensayo">
+        <!--Sección Educación-->
+        <section class="educacionGrid">
+          <div class="educacionGridTexto">
+            <h2>PROMOVEMOS LAS CULTURAS Y LAS ARTES</h2>
+            <p>Tenemos la convicción de que la educación y el apoyo a la investigación en arte y cultura son esenciales
+              para
+              el desarrollo integral de todo individuo. Por ello, nos enfocamos en generar espacios de aprendizaje,
+              enseñanza y vinculación con el medio, para avanzar en la dirección de hacer del arte un derecho para todas
+              y
+              todos.</p>
+          </div>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-md-3 g-lg-5">
+              <div class="col ">
+                <div class="card border-0 my-5 rounded-0">
+                  <a href="./pages/education.html">
+                    <img src="./img/clases.jpg" class="card-img rounded-0" alt="Estudiante aprendiendo flauta traversa">
+                    <div class="card-img-overlay rounded-0 fs-2">
+                      <div class="text-down">
+                        <h5 class="card-title">CURSOS Y TALLERES</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <div class="col-md-6 align-self-center pb-3">
-                <div class="card-body">
-                  <h1>CORPORACIÓN CULTURAL</h1>
-                  <p class="card-text text-center">Somos una corporación chilena sin fines de lucro que trabaja
-                    para disminuir las brechas de acceso al conocimiento y aprendizaje de las artes, generando
-                    instancias participativas entre artistas y públicos, con el objetivo de fomentar el desarrollo
-                    artístico del país.</p>
-                  <p class="card-text text-center mb-sm-1 mb-md-3">Para conocer más sobre nuestro trabajo, haz click en
-                    el
-                    siguiente link:</p>
-                  <a class="button" href="./pages/about.html">Ver más</a>
+              <div class="col ">
+                <div class="card border-0 my-5 rounded-0">
+                  <a href="./pages/education.html">
+                    <img src="./img/investigacion.jpg" class="card-img rounded-0" alt="Violín y partituras">
+                    <div class="card-img-overlay rounded-0 fs-2">
+                      <div class="text-down">
+                        <h5 class="card-title">CREACIÓN</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 my-5 rounded-0">
+                  <a href="./pages/education.html">
+                    <img src="./img/extension.jpg" class="card-img rounded-0"
+                      alt="Joven grabando un concierto con su teléfono">
+                    <div class="card-img-overlay rounded-0 fs-2">
+                      <div class="text-down">
+                        <h5 class="card-title">EXTENSIÓN</h5>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          </div>
         </section>
-      </section>
-
-      <!--Sección Educación-->
-      <section class="educacionGrid">
-        <h2>PROMOVEMOS LAS CULTURAS Y LAS ARTES</h2>
-        <p>Tenemos la convicción de que la educación y el apoyo a la investigación en arte y cultura son esenciales
-          para
-          el desarrollo integral de todo individuo. Por ello, nos enfocamos en generar espacios de aprendizaje,
-          enseñanza y vinculación con el medio, para avanzar en la dirección de hacer del arte un derecho para todas y
-          todos.</p>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-3 g-md-3 g-lg-5">
-            <div class="col ">
-              <div class="card border-light my-5">
-                <a href="./pages/education.html">
-                  <img src="./img/clases.jpg" class="card-img" alt="Estudiante aprendiendo flauta traversa">
-                  <div class="card-img-overlay">
-                    <div class="text-down">
-                      <h5 class="card-title fs-3">CURSOS Y TALLERES</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col ">
-              <div class="card border-lightbg-dark my-5">
-                <a href="./pages/education.html">
-                  <img src="./img/investigacion.jpg" class="card-img" alt="Violín y partituras">
-                  <div class="card-img-overlay">
-                    <div class="text-down">
-                      <h5 class="card-title fs-3">CREACIÓN</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-lightbg-dark my-5">
-                <a href="./pages/education.html">
-                  <img src="./img/extension.jpg" class="card-img" alt="Joven grabando un concierto con su teléfono">
-                  <div class="card-img-overlay">
-                    <div class="text-down">
-                      <h5 class="card-title fs-3">EXTENSIÓN</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-      </section>
     </main>-->
 
     <!--Sección Cartelera Conciertos-->
@@ -214,7 +192,7 @@
       <div class="contactoContainer1">
         <div class="contactoWrap">
           <div class="divButton">
-            <p>¿Quieres aportar con nuestra labor cultural y educativa?</p>
+            <p>¿Quieres apoyar nuestra labor cultural y educativa?</p>
             <a class="button" href="./pages/join.html">SÚMATE</a>
           </div>
         </div>

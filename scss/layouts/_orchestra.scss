@@ -1,13 +1,18 @@
-.fade-in {
-  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
-}
+.titleContainer2 {
+  @include banner-img;
+  background-image: url(../img/orchestra1-320.jpg);
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
+  @media (min-width: 768px) {
+    background-image: url(../img/orchestra1-768.jpg);
   }
-  100% {
-    opacity: 1;
+
+  @media (min-width: 992px) {
+    background-image: url(../img/orchestra1-1024.jpg);
+  }
+
+  h1 {
+    @extend .h2Title;
+    background-color: #00000052;
   }
 }
 

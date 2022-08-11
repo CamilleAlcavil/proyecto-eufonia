@@ -38,6 +38,13 @@
 
   .aporte {
     align-self: center;
+
+    p {
+      padding-top: 2rem;
+      @include tablet {
+        padding-top: 0rem;
+      }
+    }
   }
 
   .botonesGrid {
@@ -78,25 +85,32 @@
     padding: 4rem 0rem 4rem 0rem;
   }
 
-  .contactanos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  p {
+    padding-top: 2rem;
+    @include tablet {
+      padding-top: 0rem;
+    }
   }
 
-  .buttonContactanos {
-    align-self: center;
-    justify-self: center;
+    .contactanos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-    .button {
-      width: 10rem;
+    .buttonContactanos {
+      align-self: center;
+      justify-self: center;
 
-      @include tablet {
-        width: 13rem;
+      .button {
+        width: 10rem;
+
+        @include tablet {
+          width: 13rem;
+        }
       }
     }
   }
-}
 
 .form {
   padding: 1.5rem 0rem 2rem 0rem;

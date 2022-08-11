@@ -52,13 +52,13 @@
   overflow: hidden;
   font-weight: 500;
 
-  @media (min-width: 768px) {
+  @include tablet {
     height: 3rem;
     font-size: 3rem;
     line-height: 3rem;
   }
 
-  @media (min-width: 992px) {
+  @include desktop {
     height: 3.5rem;
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -230,7 +230,6 @@
   }
 
   .card-img-overlay {
-    @extend a;
     color: $color-default;
     background-color: #0d0d0dbd;
     margin-top: 60%;
@@ -249,43 +248,80 @@
   }
 
   .card {
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+    overflow: hidden;
 
-    &:hover {
-      opacity: 1;
-      transform: scale(1.15, 1.15);
-      -webkit-transform: scale(1.15, 1.15);
-      -moz-transform: scale(1.15, 1.15);
-      -ms-transform: scale(1.15, 1.15);
-      -o-transform: scale(1.15, 1.15);
+    a {
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -ms-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        transform: scale(1.15, 1.15);
+        -webkit-transform: scale(1.15, 1.15);
+        -moz-transform: scale(1.15, 1.15);
+        -ms-transform: scale(1.15, 1.15);
+        -o-transform: scale(1.15, 1.15);
+      }
     }
   }
 }
 
 .cartelera {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-  align-items: center;
+  display: grid;
+  margin-bottom: 5rem;
+}
 
-  h2 {
-    text-align: center;
-    font-family: "Frank Ruhl Libre", serif;
+.estreno {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $color-primary;
+  border-radius: 0.3rem;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+.estrenoTexto {
+  color: $color-secondary;
+  text-align: center;
+  padding-bottom: 2rem;
+
+  h3 {
+    font-size: 2.5rem;
+    font-family: $font-special;
     letter-spacing: 1px;
+    padding-top: 3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    padding-top: 0rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
   }
 
   .button {
+    background-color: $color-default;
     display: block;
     margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    width: 8rem;
+    width: 10rem;
+
+    @include tablet {
+      width: 13rem;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }

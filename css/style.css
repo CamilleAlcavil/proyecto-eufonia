@@ -329,7 +329,7 @@ ul {
   padding: 0;
 }
 
-a, .educacionGrid .card-img-overlay {
+a {
   text-decoration: none;
   color: #0d0d0d;
 }
@@ -592,14 +592,16 @@ a, .educacionGrid .card-img-overlay {
   padding-left: 0.5rem;
 }
 .educacionGrid .card {
+  overflow: hidden;
+}
+.educacionGrid .card a {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.educacionGrid .card:hover {
-  opacity: 1;
+.educacionGrid .card a:hover {
   transform: scale(1.15, 1.15);
   -webkit-transform: scale(1.15, 1.15);
   -moz-transform: scale(1.15, 1.15);
@@ -608,25 +610,58 @@ a, .educacionGrid .card-img-overlay {
 }
 
 .cartelera {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-  align-items: center;
+  display: grid;
+  margin-bottom: 5rem;
 }
-.cartelera h2 {
+
+.estreno {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #0d0007;
+  border-radius: 0.3rem;
+}
+@media (min-width: 768px) {
+  .estreno {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+.estrenoTexto {
+  color: #f2f2f2;
   text-align: center;
+  padding-bottom: 2rem;
+}
+.estrenoTexto h3 {
+  font-size: 2.5rem;
   font-family: "Frank Ruhl Libre", serif;
   letter-spacing: 1px;
+  padding-top: 3rem;
 }
-.cartelera .button {
+.estrenoTexto h4 {
+  font-size: 2rem;
+  padding-top: 0rem;
+}
+.estrenoTexto p {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+}
+.estrenoTexto .button {
+  background-color: #ffffff;
   display: block;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  width: 8rem;
+  width: 10rem;
+}
+@media (min-width: 768px) {
+  .estrenoTexto .button {
+    width: 13rem;
+  }
+}
+.estrenoTexto .button:hover {
+  color: #0d0007;
 }
 
 .tracking-in-expand {
@@ -852,6 +887,14 @@ a, .educacionGrid .card-img-overlay {
 .aportesGrid .aporte {
   align-self: center;
 }
+.aportesGrid .aporte p {
+  padding-top: 2rem;
+}
+@media (min-width: 768px) {
+  .aportesGrid .aporte p {
+    padding-top: 0rem;
+  }
+}
 .aportesGrid .botonesGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -890,6 +933,14 @@ a, .educacionGrid .card-img-overlay {
 @media (min-width: 992px) {
   .introFormulario {
     padding: 4rem 0rem 4rem 0rem;
+  }
+}
+.introFormulario p {
+  padding-top: 2rem;
+}
+@media (min-width: 768px) {
+  .introFormulario p {
+    padding-top: 0rem;
   }
 }
 .introFormulario .contactanos {

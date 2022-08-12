@@ -277,7 +277,7 @@
   display: grid;
   grid-template-columns: 1fr;
   border-radius: 0.3rem;
-
+  
   img {
     object-fit: cover;
   }
@@ -308,20 +308,6 @@
       text-align: center;
       padding: 0rem;
       font-size: 1.8rem;
-    }
-  }
-
-  .button {
-    background-color: $color-default;
-    display: block;
-    margin: 0 auto;
-    margin-top: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 10rem;
-
-    @include tablet {
-      width: 13rem;
     }
   }
 }

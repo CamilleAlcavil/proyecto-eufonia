@@ -92,25 +92,25 @@
     }
   }
 
-    .contactanos {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+  .contactanos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .buttonContactanos {
-      align-self: center;
-      justify-self: center;
+  .buttonContactanos {
+    align-self: center;
+    justify-self: center;
 
-      .button {
-        width: 10rem;
+    .button {
+      width: 10rem;
 
-        @include tablet {
-          width: 13rem;
-        }
+      @include tablet {
+        width: 13rem;
       }
     }
   }
+}
 
 .form {
   padding: 1.5rem 0rem 2rem 0rem;

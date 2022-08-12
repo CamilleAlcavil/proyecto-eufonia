@@ -205,7 +205,6 @@ table {
   table-layout: fixed;
   width: 90%;
   border-collapse: collapse;
-  margin-top: 2rem;
 }
 
 thead {
@@ -218,7 +217,7 @@ thead th:nth-child(1), thead th:nth-child(2), thead th:nth-child(3) {
 
 th,
 td {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
@@ -320,7 +319,7 @@ p {
 @media (min-width: 992px) {
   p {
     padding: 0rem 2.5rem 1rem 2.5rem;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -617,51 +616,52 @@ a {
 .estreno {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #0d0007;
   border-radius: 0.3rem;
+}
+.estreno img {
+  object-fit: cover;
 }
 @media (min-width: 768px) {
   .estreno {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 50% 50%;
   }
 }
-
-.estrenoTexto {
-  color: #f2f2f2;
-  text-align: center;
-  padding-bottom: 2rem;
+@media (min-width: 992px) {
+  .estreno {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
 }
-.estrenoTexto h3 {
-  font-size: 2.5rem;
+.estreno .estrenoTabla h4 {
   font-family: "Frank Ruhl Libre", serif;
-  letter-spacing: 1px;
-  padding-top: 3rem;
-}
-.estrenoTexto h4 {
-  font-size: 2rem;
-  padding-top: 0rem;
-}
-.estrenoTexto p {
-  font-size: 1.8rem;
-  font-style: italic;
   text-align: center;
+  padding-top: 2rem;
 }
-.estrenoTexto .button {
+@media (min-width: 992px) {
+  .estreno .estrenoTabla h4 {
+    padding: 0rem;
+  }
+}
+.estreno .estrenoTabla h3 {
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  padding: 0rem;
+  font-size: 1.8rem;
+}
+.estreno .button {
   background-color: #ffffff;
   display: block;
   margin: 0 auto;
+  margin-top: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 10rem;
 }
 @media (min-width: 768px) {
-  .estrenoTexto .button {
+  .estreno .button {
     width: 13rem;
   }
-}
-.estrenoTexto .button:hover {
-  color: #0d0007;
 }
 
 .tracking-in-expand {
@@ -831,12 +831,28 @@ a {
   padding-bottom: 0.5rem;
 }
 
+.educationAreas {
+  margin-bottom: 2rem;
+}
+
 .sublista li {
-  list-style: circle;
+  text-align: center;
 }
 
 .card-title {
   font-family: "Frank Ruhl Libre", serif;
+  padding: 0rem;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+.card-text {
+  padding: 0rem;
+  text-align: left;
 }
 
 .joinTitle {

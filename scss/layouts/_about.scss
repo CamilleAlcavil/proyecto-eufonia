@@ -15,61 +15,70 @@
   }
 }
 
-.p1 {
-  padding-top: 1rem;
-  padding-bottom: 0rem;
+.p1,
+.p2 {
+  padding: 1.5rem 2rem 0.5rem 2rem;
+  text-align: center;
+
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.p2 {
+  text-align: justify;
 }
 
 .mvGrid {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
   row-gap: 1rem;
   margin: 1rem 2rem 3rem 2rem;
-  text-align: justify;
-
-  @include desktop {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    font-size: 1rem;
-  }
-}
-
-.card-header {
-  font-family: $font-special;
-  font-size: 1.2rem;
-  background-color: #0d0007;
 
   @include tablet {
-    font-size: 1.5rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: none;
   }
 
   @include desktop {
-    font-size: 1.7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  img {
+    height: 100%;
+
+    @include tablet {
+      width: 95%;
+    }
   }
 }
 
-.swing-in-top-fwd {
-  animation: 1s swing-in-top-fwd 1.2s both;
-}
+.cardColumn {
+  display: grid;
+  row-gap: 1rem;
 
-@keyframes swing-in-top-fwd {
-  0% {
-    transform: rotateX(-100deg);
-    transform-origin: top;
-    opacity: 0;
+  @include tablet {
+    row-gap: 1.5rem;
   }
-  100% {
-    transform: rotateX(0deg);
-    transform-origin: top;
-    opacity: 1;
-  }
-}
 
-.actividades img {
-  object-fit: contain;
-  height: 100%;
+  .card {
+    background-color: $color-primary;
+  }
+
+  .card-header {
+    font-family: $font-special;
+    font-size: 1.2rem;
+    border-bottom: $color-default;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      font-size: 1.7rem;
+    }
+  }
 }
 
 .directorio {

@@ -43,11 +43,15 @@ footer {
   display: grid;
   grid-template-areas:
     "header"
+    "bannerGrid"
     "main"
     "invitacion"
     "contacto"
     "footer";
-  grid-template-columns: 1fr;
+
+    .bannerGrid {
+      grid-area: bannerGrid;
+    }
 
   .invitacion {
     grid-area: invitacion;

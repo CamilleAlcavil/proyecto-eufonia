@@ -5,14 +5,14 @@
 
 .titleContainer1 {
   @include banner-img;
-  background-image: url(../img/carousel1-320.jpg);
+  background-image: url(../img/portada-320.jpg);
 
   @include tablet {
-    background-image: url(../img/carousel1-768.jpg);
+    background-image: url(../img/portada-768.jpg);
   }
 
   @include desktop {
-    background-image: url(../img/carousel1-1024.jpg);
+    background-image: url(../img/portada-1024.jpg);
   }
 }
 

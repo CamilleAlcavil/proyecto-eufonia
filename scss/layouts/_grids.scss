@@ -43,14 +43,19 @@ footer {
   display: grid;
   grid-template-areas:
     "header"
-    "bannerGrid"
+    "banner"
     "main"
+    "galeria"
     "invitacion"
     "contacto"
     "footer";
 
-    .bannerGrid {
-      grid-area: bannerGrid;
+    .banner {
+      grid-area: banner;
+    }
+
+    .galeria {
+      grid-area: galeria;
     }
 
   .invitacion {

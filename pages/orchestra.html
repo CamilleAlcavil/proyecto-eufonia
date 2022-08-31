@@ -24,6 +24,7 @@
 
 <body>
   <section class="orchestraGrid">
+
     <!--Logo y barra de navegación-->
     <header>
       <nav class="navbar navbar-expand-sm navbar-light">
@@ -58,77 +59,52 @@
 
     <!--Inicio contenido-->
 
-      <section class="bannerGrid">
-        <div class="titleContainer2 fade-in">
-          <div class="titleWrap">
-            <div class="titleBoxContainer">
-              <div class="titleBox">
-                <h1 class="tracking-in-expand">ORQUESTA</h1>
-              </div>
+    <section class="banner">
+      <div class="titleContainer2 fade-in">
+        <div class="titleWrap">
+          <div class="titleBoxContainer">
+            <div class="titleBox">
+              <h1 class="tracking-in-expand">ORQUESTA</h1>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <main>
-      <!--<section class="orquesta1">
-        <div data-aos="fade-right" data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-          <div class="card w-60 mt-5 mb-5 me-4 ms-4 align-items-center border-bottom">
-            <div class="row">
-              <div class="d-none d-md-block col-md-6">
-                <img src="../img/camerata.png" class="rounded-start" alt="Camerata de cuerdas">
-              </div>
-              <div class="col-md-6 align-self-center">
-                <div class="card-body">
-                  <p class="card-text">
-                  <h2>Historia</h2>
-                  <p>
-                    Nuestra orquesta nace el año 2014 bajo el alero de la Facultad de
-                    Derecho de la Universidad de Chile. Empezando como grupo de cámara
-                    compuesto solo por alumnos de dicha escuela, a partir del año 2017 se
-                    transforma en orquesta sinfónica, integrándose por músicos de diferentes
-                    orígenes, ampliando su repertorio
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main>
+      <div class="parrafoOrquesta">
+        <p><em>La Orquesta UAHC es un espacio práctica y perfeccionamiento orquestal que reúne a compositores,
+          instrumentistas, directoras y directores de orquesta con distintos niveles de formación en el que pueden no
+          sólo desarrollar sus habilidades técnico-musicales, sino que generar vínculos y nutrirse a partir de otras
+          experiencias y realidades.</em></p>
+      </div>
+
+      <section class="historia">
+        <div class="historiaImg">
+          <img src="../img/camerata.png" alt="Camerata de cuerdas">
+        </div>
+        <div class="historiaTexto">
+          <h5>HISTORIA</h5>
+          <p>La orquesta nació el año 2014, en la Facultad de Derecho de la Universidad de Chile, primero como grupo de cámara y, a partir del año 2017, como orquesta sinfónica integrada por músicos de diversos sectores.</p>
         </div>
       </section>
 
-      <section class="orquesta2">
-        <div data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-          <div class="card w-60 mt-5 mb-5 me-3 ms-3 align-items-center border-bottom">
-            <div class="row">
-              <div class="col-md-6 align-self-center">
-                <div class="card-body">
-                  <p class="card-text">
-                  <h2>Orquesta Sinfónica UAHC</h2>
-                  <p>En 2022, luego de firmar un convenio con la Universidad Academia de
-                    Humanismo Cristiano (UAHC) la orquesta pasa a formar parte de esta casa de
-                    estudios.</p>
-                </div>
-              </div>
-              <div class="d-none d-md-block col-md-6">
-                <img src="../img/firma-convenio.png" class="rounded-start" alt="Camerata de cuerdas">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Galería-->
-      <section class="galeria">
-
-
+      <section class="convenio">
+        <div class="convenioTexto">
+        <h5>ORQUESTA SINFÓNICA UAHC</h5>
+        <p>En 2022, luego de firmar un convenio con la Universidad Academia de Humanismo Cristiano (UAHC) la orquesta pasa a formar parte de esta casa de estudios, abriendo oportunidades a nuevos músicos.</p>
+      </div>
+      <div class="convenioImg">
+       <img src="../img/firma-convenio.png" alt="Acto de firma de convenio">
+      </div>
       </section>
 
       <!--Tabla de conciertos-->
       <section class="cartelera2">
-        <h2 id="concert">PRÓXIMOS CONCIERTOS 2022</h2>
+        <h2 id="concert">PRÓXIMOS CONCIERTOS</h2>
         <h4 class="compositor">Ludwig van Beethoven</h4>
         <h3 class="obra">Sinfonía No.9 en re menor</h3>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+        <div data-aos="fade-down" data-aos-duration="1000">
           <table class="tablaConciertos">
             <thead>
               <tr>
@@ -161,15 +137,82 @@
       </section>
     </main>
 
-    <section class="invitacion">
-      <div class="card m-3 m-md-5 pt-3 pb-3 pe-2 ps-2">
-        <div class="card-body">
-          ¿Eres instrumentista y te gustaría participar como músico en nuestra orquesta? ¿Eres compositor@ y quieres
-          poner en escena tus obras? ¿Eres director@ y necesitas un espacio para mejorar tus habilidades? Escríbenos a
-          través de nuestro formulario de contacto:
+    <!--Galería-->
+    <section class="galeria">
+      <h2>GALERÍA</h2>
+      <div class="galeriaContainer">
+
+        <div class="rowGaleria">
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-1.jpg" style="width:100%" onclick="currentSlide(1)"
+              alt="Cornistas">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-2.jpg" style="width:100%" onclick="currentSlide(2)"
+              alt="Orquesta en Facultad de Medicina">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-3.jpg" style="width:100%" onclick="currentSlide(3)"
+              alt="Orquesta en ensayo">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-4.jpg" style="width:100%" onclick="currentSlide(4)"
+              alt="Contrabajistas">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-5.jpeg" style="width:100%" onclick="currentSlide(5)"
+              alt="Presentación en Teatro de Maipú">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="../img/carousel-6.jpeg" style="width:100%" onclick="currentSlide(6)"
+              alt="Presentación en Teatro de Maipú (2)">
+          </div>
         </div>
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="../img/carousel-1-wide.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="../img/carousel-2-wide.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="../img/carousel-3-wide.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="../img/carousel-4-wide.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="../img/carousel-5-wide.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="../img/carousel-6-wide.jpeg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
       </div>
     </section>
+
+    <!--<section class="invitacion">
+      <div class="card py-3 px-2 my-5">
+        <div class="card-body">
+          ¿Eres instrumentista y te gustaría participar como músico en nuestra orquesta? ¿Eres compositor@ y quieres
+          poner en escena tus obras? ¿Eres director@ y necesitas un espacio para mejorar tus habilidades?
+        </div>
+      </div>
+    </section>-->
 
     <!--Formulario de Contacto-->
     <section class="contacto">
@@ -220,6 +263,7 @@
   <script>
     AOS.init();
   </script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

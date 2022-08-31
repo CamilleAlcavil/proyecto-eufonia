@@ -112,10 +112,9 @@
   }
 }
 
-.form {
-  padding: 1.5rem 0rem 2rem 0rem;
-  text-align: center;
+#form {
   background-color: $color-primary;
+
   h2 {
     color: $color-secondary;
     border-bottom: solid $color-secondary;
@@ -124,16 +123,56 @@
 
 form {
   width: 100%;
-  padding: 1.5rem 1rem 1.5rem 1rem;
+  padding-bottom: 2rem;
   box-sizing: border-box;
-  color: $color-default;
+  color: $color-secondary;
   font-weight: 400;
-}
+  text-align: center;
 
-input,
-select,
-textarea {
-  padding: 2px;
-  margin: 10px;
-  font-family: $font-primary;
+  .labelTop {
+    padding-top: 1rem;
+  }
+
+  label {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 15rem;
+    border: 0;
+    border-bottom: 1.5px solid $color-secondary;
+    font-family: $font-primary;
+    background-color: $color-primary;
+    color: $color-secondary;
+
+    @include tablet {
+      width: 20rem;
+    }
+  }
+
+  .textareaBorder {
+    border: 1.5px solid $color-secondary;
+  }
+
+  button {
+    margin-top: 1.5rem;
+  }
+
+  .buttonForm {
+    background-color: $color-primary;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+    font-family: $font-special;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $color-default;
+      color: $color-primary;
+      transition-duration: 0.25s;
+    }
+  }
 }

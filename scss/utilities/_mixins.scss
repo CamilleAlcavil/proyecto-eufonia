@@ -24,3 +24,41 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin parrafoIntroduccion {
+  padding: 1.5rem 2rem 0rem 2rem;
+  text-align: left;
+
+  @include tablet {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include desktop {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+}
+}
+
+@mixin cards {
+  margin: 3rem 2rem 2rem 2rem;
+
+  @include tablet {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  @include desktop {
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+  }
+
+  .card-header {
+    background-color: $color-default;
+    padding-bottom: 0.5rem;
+  }
+
+  img {
+    height: 100%;
+}
+}

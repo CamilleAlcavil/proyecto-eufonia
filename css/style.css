@@ -1029,8 +1029,6 @@ a {
 .educationAreas p {
   padding: 1.5rem 2rem 0rem 2rem;
   text-align: left;
-  padding-bottom: 0rem;
-  margin-bottom: 0rem;
 }
 @media (min-width: 768px) {
   .educationAreas p {

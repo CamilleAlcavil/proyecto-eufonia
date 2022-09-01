@@ -1,9 +1,8 @@
 h1 {
-  background-color: $color-primary;
+  @include color($color-primary, $color-secondary);
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
-  color: $color-secondary;
   font-family: $font-special;
   font-size: 2.5rem;
   letter-spacing: 1px;

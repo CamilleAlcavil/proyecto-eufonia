@@ -1,24 +1,17 @@
 .educationAreas {
   margin-bottom: 2rem;
-}
 
-.sublista {
-  li {
-    text-align: center;
+  h2 {
+    padding: 1rem 1rem 0rem 1rem;
   }
-}
 
-.card-title {
-  font-family: $font-special;
-  padding: 0rem;
-  text-align: left;
-
-  @include tablet {
-    font-size: 1.25rem;
+  p {
+    @include parrafoIntroduccion;
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
   }
-}
 
-.card-text {
-  padding: 0rem;
-  text-align: left;
+  .educationCards {
+    @include cards;
+  }
 }

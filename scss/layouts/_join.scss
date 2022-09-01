@@ -21,93 +21,76 @@
 }
 
 .aportesGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: $color-secondary;
+  @include displayGrid(grid, 1fr, none);
   padding: 2rem 1.5rem 2rem 1.5rem;
+  background-color: $color-secondary;
 
   @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    @include displayGrid(grid, 45% 55%, 1fr);
   }
 
   @include desktop {
     padding: 4rem 0rem 4rem 0rem;
   }
+}
 
-  .aporte {
-    align-self: center;
+.aporteImg {
+  align-self: center;
+}
 
-    p {
-      padding-top: 2rem;
-      @include tablet {
-        padding-top: 0rem;
-      }
+.aporte {
+  align-self: center;
+
+  p {
+    padding-top: 2rem;
+
+    @include tablet {
+      padding-top: 0rem;
     }
   }
+}
 
-  .botonesGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 3rem;
-    margin: 0rem 3rem 0rem 3rem;
-    justify-items: center;
+.botonesGrid {
+  @include displayGrid(grid, 1fr, none);
+  row-gap: 3rem;
+  margin: 0rem 3rem 0rem 3rem;
+  justify-items: center;
 
-    @include desktop {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 3rem;
-    }
+  @include desktop {
+    @include displayGrid(grid, 1fr 1fr, none);
+    column-gap: 3rem;
+  }
 
-    .button {
-      width: 10rem;
+  .button {
+    width: 10rem;
 
-      @include tablet {
-        width: 13rem;
-      }
+    @include tablet {
+      width: 13rem;
     }
   }
 }
 
 .introFormulario {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: $color-secondary;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  @extend .aportesGrid;
+}
 
-  @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
+.contactanos {
+  @extend .aporte;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  @include desktop {
-    padding: 4rem 0rem 4rem 0rem;
-  }
+.buttonContactanos {
+  align-self: center;
+  justify-self: center;
 
-  p {
-    padding-top: 2rem;
+  .button {
+    width: 13rem;
+
     @include tablet {
-      padding-top: 0rem;
-    }
-  }
-
-  .contactanos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .buttonContactanos {
-    align-self: center;
-    justify-self: center;
-
-    .button {
-      width: 10rem;
-
-      @include tablet {
-        width: 13rem;
-      }
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
 }
@@ -118,6 +101,20 @@
   h2 {
     color: $color-secondary;
     border-bottom: solid $color-secondary;
+  }
+
+  @include tablet {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @include desktop {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -144,8 +141,7 @@ form {
     border: 0;
     border-bottom: 1.5px solid $color-secondary;
     font-family: $font-primary;
-    background-color: $color-primary;
-    color: $color-secondary;
+    @include color($color-primary, $color-secondary);
 
     @include tablet {
       width: 20rem;
@@ -157,22 +153,59 @@ form {
   }
 
   button {
-    margin-top: 1.5rem;
+    border: none;
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
   }
 
   .buttonForm {
-    background-color: $color-primary;
-    color: $color-secondary;
+    @include color($color-secondary, $color-primary);
     border: 2px solid $color-secondary;
-    padding: 0.5rem 1rem 0.5rem 1rem;
     text-align: center;
     font-family: $font-special;
     transition: all 1s ease;
+    width: 100%;
+    padding: 0.3rem 1.3rem;
 
     &:hover {
-      background-color: $color-default;
-      color: $color-primary;
+      @include color($color-primary, $color-secondary);
       transition-duration: 0.25s;
     }
+  }
+}
+
+.donaciones {
+  @include parrafoIntroduccion;
+  background-color: $color-secondary;
+  padding-bottom: 2rem;
+
+  p {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+
+    h5 {
+      font-weight: bold;
+    }
+
+    p {
+      text-align: left;
+      padding-left: 0rem;
+    }
+  }
+
+  .linkFormulario {
+    text-decoration: underline;
+
+    &:hover {
+      font-weight: bold;
+      color: $color-primary;
+    }
+  }
+
+  ul {
+    text-align: center;
+    font-weight: bold;
   }
 }

@@ -37,7 +37,7 @@
   @include desktop {
     padding-left: 5.5rem;
     padding-right: 5.5rem;
-}
+  }
 }
 
 @mixin cards {
@@ -53,12 +53,41 @@
     margin-right: 5.5rem;
   }
 
-  .card-header {
+  .card-title {
+    font-family: $font-special;
     background-color: $color-default;
     padding-bottom: 0.5rem;
+
+    @include tablet {
+      font-size: 1.25rem;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  .card-header {
+    border-bottom: 1px solid $color-primary2;
+  }
+
+  .card-text {
+    padding: 0rem;
+    text-align: left;
   }
 
   img {
     height: 100%;
+  }
 }
+
+@mixin displayGrid($display, $columns, $rows) {
+  display: $display;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+@mixin color($bg, $color) {
+  background-color: $bg;
+  color: $color;
 }

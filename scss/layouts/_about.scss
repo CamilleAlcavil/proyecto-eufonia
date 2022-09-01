@@ -1,9 +1,11 @@
 .textoAbout {
   p {
-    @include parrafoIntroduccion}}
+    @include parrafoIntroduccion;
+  }
+}
 
 .misionVision {
-  @include cards
+  @include cards;
 }
 
 .directorio {
@@ -12,15 +14,21 @@
 
   img {
     width: 70%;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 70%;
+    }
   }
 }
 
 .directorioGrid {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  @include displayGrid(grid, 1fr, 1fr 1fr 1fr);
   row-gap: 1rem;
+  text-align: center;
 
   @include desktop {
     margin-top: 1rem;
@@ -42,10 +50,13 @@
   margin-right: 1rem;
 
   @include desktop {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    @include displayGrid(grid, 1fr 2fr, none);
     align-content: center;
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .foto {
+    align-self: center;
   }
 }

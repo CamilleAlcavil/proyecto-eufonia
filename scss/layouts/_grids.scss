@@ -50,13 +50,13 @@ footer {
     "contacto"
     "footer";
 
-    .banner {
-      grid-area: banner;
-    }
+  .banner {
+    grid-area: banner;
+  }
 
-    .galeria {
-      grid-area: galeria;
-    }
+  .galeria {
+    grid-area: galeria;
+  }
 
   .invitacion {
     grid-area: invitacion;
@@ -84,9 +84,9 @@ footer {
 //Diseño Grilla join.html
 .joinGrid {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "joinTitle"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "joinTitle"
+    "main"
+    "footer";
 }

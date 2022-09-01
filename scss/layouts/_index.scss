@@ -186,12 +186,26 @@
     @include h1-style-2;
   }
 
-  @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .presentacionImg {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  img {
+    height: 100%;
+
+    @include tablet {
+      width: 70%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
   }
 
   @include desktop {
+    @include displayGrid(grid, 1fr 1fr, none);
     padding: 4rem 0rem 4rem 0rem;
   }
 }
@@ -200,8 +214,7 @@
   justify-self: center;
 
   .botonesGrid {
-    display: grid;
-    grid-template-columns: 1fr;
+    @include displayGrid(grid, 1fr, none);
     row-gap: 3rem;
     margin: 0rem 3rem 0rem 3rem;
 
@@ -217,26 +230,22 @@
 }
 
 .educacionGrid {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include displayGrid(grid, 1fr, none);
   background-color: $color-secondary;
 
   .educacionGridTexto {
     @include tablet {
-      display: grid;
-      grid-template-columns: 40% 60%;
+      @include displayGrid(grid, 40% 60%, none);
       padding-top: 2rem;
     }
   }
 
   .card-img-overlay {
-    color: $color-default;
-    background-color: #0d0d0dbd;
+    @include color(#0d0d0dbd, $color-default);
     margin-top: 60%;
 
     &:hover {
-      background-color: $color-primary;
-      color: $color-secondary;
+      @include color($color-primary, $color-secondary);
     }
 
     h5 {
@@ -274,23 +283,24 @@
 }
 
 .estreno {
-  display: grid;
-  grid-template-columns: 1fr;
+  .estrenoImg {
+    align-self: center;
+  }
+
+  @include displayGrid(grid, 1fr, none);
   border-radius: 0.3rem;
   text-align: center;
-  
+
   img {
     object-fit: cover;
   }
 
   @include tablet {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    @include displayGrid(grid, 50% 50%, none);
   }
 
   @include desktop {
-    display: grid;
-    grid-template-columns: 40% 60%;
+    @include displayGrid(grid, 40% 60%, none);
   }
 
   .estrenoTabla {

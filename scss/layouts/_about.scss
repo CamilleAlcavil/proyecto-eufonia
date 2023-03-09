@@ -26,7 +26,7 @@
 }
 
 .directorioGrid {
-  @include displayGrid(grid, 1fr, 1fr 1fr 1fr);
+  @include displayGrid(grid, 1fr, 1fr 1fr);
   row-gap: 1rem;
   text-align: center;
 

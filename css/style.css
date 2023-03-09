@@ -775,7 +775,7 @@ a {
 .directorioGrid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   row-gap: 1rem;
   text-align: center;
 }
@@ -1241,8 +1241,8 @@ form textarea {
 }
 @media (min-width: 768px) {
   form input,
-form select,
-form textarea {
+  form select,
+  form textarea {
     width: 20rem;
   }
 }
